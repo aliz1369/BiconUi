@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="conversation"
+            type="com.tivasoft.biconui.data.model.network.responses.common.ConversationData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_8sdp"
+        android:paddingStart="@dimen/_4sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        app:itemAlpha="@{conversation.patientStatus}">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_v_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setIndicator="@{conversation.newMessageType}" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/patient_icon"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setRoundedImageFromUrl="@{conversation.patientIconUrl}"
+            app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/symptom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/metropolisregular"
+            android:text="@{conversation.symptom}"
+            android:textColor="@color/biconGrayLow"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@id/patient_icon"
+            app:layout_constraintEnd_toStartOf="@id/guide_v_50"
+            app:layout_constraintStart_toEndOf="@id/patient_icon" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/patient_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:text="@{conversation.patientName}"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/symptom"
+            app:layout_constraintEnd_toStartOf="@id/guide_v_50"
+            app:layout_constraintStart_toEndOf="@id/patient_icon"
+            app:layout_constraintTop_toTopOf="@id/patient_icon" />
+
+        <Button
+            android:id="@+id/request_confirm"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:background="@drawable/rounded_button_gradient_blue"
+            android:padding="@dimen/_4sdp"
+            android:text="@string/ok"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setRequestVisibility="@{conversation.newMessageType}" />
+
+        <Button
+            android:id="@+id/request_reject"
+            android:layout_width="@dimen/_52sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@drawable/rounded_gradient_orange"
+            android:padding="@dimen/_4sdp"
+            android:text="@string/reject"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/request_confirm"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setRequestVisibility="@{conversation.newMessageType}" />
+
+        <View
+            android:id="@+id/patient_chart"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="#000"
+            app:layout_constraintBottom_toBottomOf="@id/patient_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guide_v_50"
+            app:layout_constraintTop_toTopOf="@id/patient_icon"
+            app:setChartVisibility="@{conversation}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

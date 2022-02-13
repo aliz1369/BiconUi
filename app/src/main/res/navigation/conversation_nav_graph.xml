@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_conversation_list">
+
+    <fragment
+        android:id="@+id/fragment_conversation_list"
+        android:name="com.tivasoft.biconui.ui.common.profile.conversation_list.ConversationListFragment"
+        tools:layout="@layout/fragment_chat_list">
+        <action
+            android:id="@+id/action_conversation_list_to_conversation"
+            app:destination="@id/fragment_conversation"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out">
+            <argument
+                android:name="conversationId"
+                app:argType="string"
+                app:nullable="false" />
+
+            <argument
+                android:name="name"
+                app:argType="string"
+                app:nullable="false" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_conversation"
+        android:name="com.tivasoft.biconui.ui.common.profile.conversation.ConversationFragment"
+        tools:layout="@layout/bottom_sheet_chat">
+        <argument
+            android:name="conversationId"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+</navigation>

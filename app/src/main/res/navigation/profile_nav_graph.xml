@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_nav_graph"
+    app:startDestination="@id/fragment_profile">
+
+    <fragment
+        android:id="@+id/fragment_profile"
+        android:name="com.tivasoft.biconui.ui.common.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_user_profile_expanded"
+            app:destination="@id/fragment_user_profile_expanded"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out">
+            <argument
+                android:name="userName"
+                app:argType="string"
+                app:nullable="false" />
+            <argument
+                android:name="age"
+                app:argType="string"
+                app:nullable="false" />
+            <argument
+                android:name="gender"
+                app:argType="string"
+                app:nullable="false" />
+            <argument
+                android:name="photo"
+                app:argType="string"
+                app:nullable="true" />
+        </action>
+        <action
+            android:id="@+id/action_profile_to_map"
+            app:destination="@id/fragment_map"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_profile_to_search"
+            app:destination="@id/fragment_search"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_profile_to_search_by_category"
+            app:destination="@id/fragment_search_by_category"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out">
+            <argument
+                android:name="search_category"
+                app:argType="string"
+                app:nullable="false" />
+            <argument
+                android:name="category_id"
+                app:argType="string"
+                app:nullable="false" />
+        </action>
+        <action
+            android:id="@+id/action_profile_to_expanded_prescription"
+            app:destination="@id/fragment_expanded_prescription"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_profile_to_look_for_assistance"
+            app:destination="@id/fragment_look_for_assistance"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+      <!--  <action
+            android:id="@+id/action_profile_to_look_for_doctor"
+            app:destination="@id/fragment_look_for_doctor"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />-->
+        <action
+            android:id="@+id/action_profile_to_expanded_schedules"
+            app:destination="@id/fragment_expanded_schedules"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_user_profile_expanded"
+        android:name="com.tivasoft.biconui.ui.patient.tab_userprofile.UserProfileExpandedFragment"
+        tools:layout="@layout/fragment_user_profile">
+        <argument
+            android:name="userName"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="age"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="gender"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="photo"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_user_profile_to_package_list"
+            app:destination="@id/fragment_package_list"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out">
+            <argument
+                android:name="isAdmin"
+                app:argType="boolean"
+                app:nullable="false" />
+        </action>
+        <action
+            android:id="@+id/action_sign_out"
+            app:destination="@id/fragment_welcome"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@+id/fragment_welcome"
+            app:popUpToInclusive="true" />
+       <!-- <action
+            android:id="@+id/action_user_profile_to_account_information"
+            app:destination="@id/fragment_account_information"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_package_list"
+        android:name="com.tivasoft.biconui.ui.doctor.packages.package_list.PackageListFragment"
+        tools:layout="@layout/fragment_package_list">
+        <argument
+            android:name="isAdmin"
+            android:defaultValue="false"
+            app:argType="boolean"
+            app:nullable="false" />
+        <argument
+            android:name="doctorId"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_map"
+        android:name="com.tivasoft.biconui.ui.patient.map.MapFragment"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/fragment_search"
+        android:name="com.tivasoft.biconui.ui.patient.search.SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_search_to_package_list"
+            app:destination="@id/fragment_package_list"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_search_by_category"
+        android:name="com.tivasoft.biconui.ui.patient.search.by_category.SearchByCategoryFragment"
+        tools:layout="@layout/fragment_search_by_category">
+        <argument
+            android:name="search_category"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="category_id"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_search_to_package_list"
+            app:destination="@id/fragment_package_list"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_expanded_prescription"
+        android:name="com.tivasoft.biconui.ui.doctor.tab_prescriptions.expanded.ExpandedPrescriptionsFragment"
+        tools:layout="@layout/fragment_prescriptions" />
+
+    <fragment
+        android:id="@+id/fragment_look_for_assistance"
+        android:name="com.tivasoft.biconui.ui.doctor.look_for_assistance.LookForAssistanceFragment"
+        tools:layout="@layout/fragment_look_for_assistance">
+        <action
+            android:id="@+id/action_look_for_assistance_to_assistance_attachments"
+            app:destination="@id/fragment_assistance_attachment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out">
+            <argument
+                android:name="assistance"
+                app:argType="com.tivasoft.biconui.data.model.network.responses.doctor.AssistanceData"
+                app:nullable="false" />
+        </action>
+    </fragment>
+
+   <!-- <fragment
+        android:id="@+id/fragment_look_for_doctor"
+        android:name="com.tivasoft.biconui.ui.assistant.look_for_doctor.LookForDoctorFragment"
+        tools:layout="@layout/fragment_look_for_assistance">
+        <action
+            android:id="@+id/action_look_for_doctor_to_search_doctor"
+            app:destination="@id/fragment_search_doctor"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+-->
+    <fragment
+        android:id="@+id/fragment_expanded_schedules"
+        android:name="com.tivasoft.biconui.ui.doctor.tab_doctor_profile.expanded.ExpandedScheduleFragment"
+        tools:layout="@layout/fragment_doctor_profile_expanded">
+      <!--  <action
+            android:id="@+id/action_expanded_schedules_to_account_information"
+            app:destination="@id/fragment_account_information"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />-->
+        <action
+            android:id="@+id/action_expanded_schedules_to_calendar"
+            app:destination="@id/fragment_calendar"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_expanded_schedules_to_package_list"
+            app:destination="@id/fragment_package_list"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_expanded_schedules_to_add_package"
+            app:destination="@id/fragment_add_package"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_down" />
+        <action
+            android:id="@+id/action_sign_out"
+            app:destination="@id/fragment_welcome"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@+id/fragment_welcome"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!--<fragment
+        android:id="@+id/fragment_account_information"
+        android:name="com.tivasoft.biconui.ui.auth.doctor_account_information.AccountInformationFragment"
+        tools:layout="@layout/fragment_account_information">
+        <action
+            android:id="@+id/action_account_information_to_add_clinic"
+            app:destination="@id/fragment_add_clinic"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+-->
+    <fragment
+        android:id="@+id/fragment_calendar"
+        android:name="com.tivasoft.biconui.ui.doctor.calendar.CalendarFragment"
+        tools:layout="@layout/fragment_calendar" />
+
+    <fragment
+        android:id="@+id/fragment_add_package"
+        android:name="com.tivasoft.biconui.ui.doctor.packages.add_package.AddPackageFragment"
+        tools:layout="@layout/fragment_add_package" />
+
+   <!-- <fragment
+        android:id="@+id/fragment_add_clinic"
+        android:name="com.tivasoft.biconui.ui.auth.doctor_account_information.AddDoctorClinic"
+        tools:layout="@layout/fragment_add_doctor_clinic" />-->
+
+    <fragment
+        android:id="@+id/fragment_assistance_attachment"
+        android:name="com.tivasoft.biconui.ui.doctor.look_for_assistance.AssistanceAttachmentFragment"
+        tools:layout="@layout/fragment_assistance_attachment">
+        <argument
+            android:name="assistance"
+            app:argType="com.tivasoft.biconui.data.model.network.responses.doctor.AssistanceData"
+            app:nullable="false" />
+    </fragment>
+</navigation>

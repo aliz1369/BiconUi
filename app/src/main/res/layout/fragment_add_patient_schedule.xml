@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/menu_top_round_cyan">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/drag_handle"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/drag_handle_cyan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fillViewport="true"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:scrollbars="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/drag_handle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_12sdp">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_v_50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/time_mode"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="Time &amp; Mode"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_24ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/patient_icon"
+                    android:layout_width="@dimen/_44sdp"
+                    android:layout_height="@dimen/_44sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/time_mode"
+                    app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/schedule_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="@string/schedule_with"
+                    app:layout_constraintStart_toEndOf="@id/patient_icon"
+                    app:layout_constraintTop_toTopOf="@id/patient_icon" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/patient_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="Patient's Name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintStart_toEndOf="@id/patient_icon"
+                    app:layout_constraintTop_toBottomOf="@id/schedule_label" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/date_picker_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:cardBackgroundColor="@color/background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/patient_icon">
+
+                    <DatePicker
+                        android:id="@+id/date_picker"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_120sdp"
+                        android:calendarTextColor="@color/background"
+                        android:calendarViewShown="false"
+                        android:datePickerMode="spinner"
+                        android:theme="@style/MyDatePicker" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/start_time_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="@string/start_time"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toStartOf="@id/guide_v_50"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/date_picker_card" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/time_start_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/background"
+                    app:layout_constraintEnd_toStartOf="@id/guide_v_50"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/start_time_label">
+
+                    <TimePicker
+                        android:id="@+id/time_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_120sdp"
+                        android:theme="@style/MyDatePicker"
+                        android:timePickerMode="spinner" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/end_time_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="@string/end_time"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guide_v_50"
+                    app:layout_constraintTop_toBottomOf="@id/date_picker_card" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/time_end_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:cardBackgroundColor="@color/background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guide_v_50"
+                    app:layout_constraintTop_toBottomOf="@id/end_time_label">
+
+                    <TimePicker
+                        android:id="@+id/time_end"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_120sdp"
+                        android:theme="@style/MyDatePicker"
+                        android:timePickerMode="spinner" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <RadioGroup
+                    android:id="@+id/connection_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/time_start_card">
+
+                    <RadioButton
+                        android:id="@+id/type_video_call"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_selector_white"
+                        android:button="@null"
+                        android:drawableTop="@drawable/ic_videocam"
+                        android:fontFamily="@font/metropolismedium"
+                        android:paddingTop="@dimen/_16sdp"
+                        android:textColor="@color/background"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <RadioButton
+                        android:id="@+id/type_voice_call"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_selector_white"
+                        android:button="@null"
+                        android:drawableTop="@drawable/ic_voice"
+                        android:fontFamily="@font/metropolismedium"
+                        android:paddingTop="@dimen/_16sdp"
+                        android:textColor="@color/background"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <RadioButton
+                        android:id="@+id/type_chat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_selector_white"
+                        android:button="@null"
+                        android:drawableTop="@drawable/ic_chat"
+                        android:fontFamily="@font/metropolismedium"
+                        android:paddingTop="@dimen/_16sdp"
+                        android:textColor="@color/background"
+                        android:textSize="@dimen/_12ssp" />
+
+                </RadioGroup>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/description_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="@string/description"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/connection_type" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_68sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/rounded_edit_text"
+                    android:elevation="@dimen/_4sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:hint="@string/optional"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/md_grey_400"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/description_label" />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/rounded_cyan"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/description" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

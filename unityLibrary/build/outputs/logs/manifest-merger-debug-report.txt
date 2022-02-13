@@ -1,0 +1,113 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:2:1-54:12
+	package
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:4:5-33
+		INJECTED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml
+		INJECTED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:6:5-36:19
+activity#com.unity3d.player.UnityPlayerActivity
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:7:9-22:20
+	android:screenOrientation
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:11:13-49
+	android:process
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:13:13-43
+	android:launchMode
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:12:13-44
+	android:hardwareAccelerated
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:10:13-48
+	android:configChanges
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:9:13-194
+	android:theme
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:14:13-54
+	android:name
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:8:13-66
+meta-data#unityplayer.UnityActivity
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:16:13-18:40
+	android:value
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:18:17-37
+	android:name
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:17:17-57
+meta-data#android.notch_support
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:19:13-21:40
+	android:value
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:21:17-37
+	android:name
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:20:17-53
+meta-data#unity.splash-mode
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:24:9-26:33
+	android:value
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:26:13-30
+	android:name
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:25:13-45
+meta-data#unity.splash-enable
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:27:9-29:36
+	android:value
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:29:13-33
+	android:name
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:28:13-47
+meta-data#notch.config
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:30:9-32:50
+	android:value
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:32:13-47
+	android:name
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:31:13-40
+meta-data#unity.build-id
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:33:9-35:68
+	android:value
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:35:13-65
+	android:name
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:34:13-42
+uses-feature#0x00030000
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:38:5-54
+	android:glEsVersion
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:38:19-51
+uses-feature#android.hardware.vulkan.version
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:39:5-41:36
+	android:required
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:41:9-33
+	android:name
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:40:9-55
+uses-permission#android.permission.INTERNET
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:43:5-67
+	android:name
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:43:22-64
+uses-feature#android.hardware.touchscreen
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:45:5-47:36
+	android:required
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:47:9-33
+	android:name
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:46:9-52
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:48:5-50:36
+	android:required
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:50:9-33
+	android:name
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:49:9-63
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:51:5-53:36
+	android:required
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:53:9-33
+	android:name
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml:52:9-72
+uses-sdk
+INJECTED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml
+INJECTED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml
+INJECTED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml
+INJECTED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml
+		INJECTED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml
+		ADDED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml
+		INJECTED from /Users/aliz/AndroidStudioProjects/BiconUi/unityLibrary/src/main/AndroidManifest.xml

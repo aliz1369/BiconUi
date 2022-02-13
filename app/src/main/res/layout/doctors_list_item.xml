@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="searchData"
+            type="com.tivasoft.biconui.data.model.network.responses.auth.SearchData" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@{searchData.isFromLookForDoctors ? @color/doctor_profile_background : @color/welcome_bg}"
+        android:paddingHorizontal="@dimen/_8sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/doctor_icon"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setRoundedImageFromUrl="@{searchData.photo}"
+            app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+        <TextView
+            android:id="@+id/doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@{searchData.fullName}"
+            android:textColor="@{searchData.isFromLookForDoctors ? @color/welcome_bg : @color/auth_text_color}"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="@id/doctor_icon"
+            app:layout_constraintStart_toEndOf="@id/doctor_icon"
+            app:layout_constraintTop_toTopOf="@id/doctor_icon" />
+
+        <TextView
+            android:id="@+id/doctor_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/metropolissemibold"
+            android:text="@{searchData.educationDegree}"
+            android:textColor="@{searchData.isFromLookForDoctors ? @color/welcome_bg : @color/auth_text_color}"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/doctor_icon" />
+
+        <TextView
+            android:id="@+id/doctor_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/metropolissemibold"
+            android:text="@{searchData.educationField}"
+            android:textColor="@{searchData.isFromLookForDoctors ? @color/welcome_bg : @color/auth_text_color}"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/doctor_degree" />
+
+        <ImageView
+            android:id="@+id/checkbox"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/check"
+            android:visibility="@{searchData.isSelected ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="#dfdfdf"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/profile_background"
+    android:fillViewport="true"
+    android:paddingHorizontal="@dimen/_24sdp"
+    android:paddingTop="@dimen/_12sdp"
+    tools:context=".ui.patient.tab_doctor.DoctorFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/profile_background">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/doctor_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:background="@drawable/rounded_search"
+            android:gravity="center"
+            android:inputType="text"
+            android:paddingVertical="@dimen/_12sdp"
+            android:text="@string/search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_specialty"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            app:layout_constraintTop_toBottomOf="@id/doctor_search"
+            android:layout_marginTop="@dimen/_20sdp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/search_by_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/metropolisregular"
+            android:text="@string/search_by_map"
+            android:textColor="@color/biconGrayLow"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/rv_specialty"
+            app:layout_constraintTop_toBottomOf="@id/rv_specialty" />
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_by_map" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

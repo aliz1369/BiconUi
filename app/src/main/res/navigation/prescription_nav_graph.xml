@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_prescription_bottom_sheet">
+
+    <fragment
+        android:id="@+id/fragment_prescription_bottom_sheet"
+        android:name="com.tivasoft.biconui.ui.common.profile.PrescriptionBottomSheetFragment"
+        tools:layout="@layout/bottom_sheet_prescription" />
+</navigation>

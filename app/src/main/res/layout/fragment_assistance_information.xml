@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EBEBEB"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_assistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/metropolisregular"
+            android:text="@string/assistance_information"
+            android:textColor="#5c5c5c"
+            android:textSize="@dimen/_24ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_write_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/please_write_about_you"
+            android:textAlignment="center"
+            android:textColor="#5b5b5b"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_assistance"
+            app:layout_constraintRight_toRightOf="@id/tv_assistance"
+            app:layout_constraintTop_toBottomOf="@id/tv_assistance" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_about"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_edit_text_2"
+            android:elevation="5dp"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_write_about">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <TextView
+            android:id="@+id/tv_write_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/please_write_your_phon_number"
+            android:textAlignment="center"
+            android:textColor="#5b5b5b"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintLeft_toLeftOf="@id/et_about"
+            app:layout_constraintRight_toRightOf="@id/et_about"
+            app:layout_constraintTop_toBottomOf="@id/et_about" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_edit_text_2"
+            android:elevation="5dp"
+            android:inputType="number"
+            android:padding="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_write_number">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <TextView
+            android:id="@+id/tv_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_file"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/metropolislight"
+            android:textColor="#5b5b5b"
+            android:textSize="@dimen/_10ssp"
+            app:drawableTint="@color/Gray_5"
+            app:layout_constraintBottom_toTopOf="@id/btn_confirm"
+            app:layout_constraintLeft_toLeftOf="@id/et_phone_number"
+            app:layout_constraintTop_toBottomOf="@id/et_phone_number">
+
+        </TextView>
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/ic_brown_button_view"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:spinning_bar_color="#49A8EC"
+            app:spinning_bar_padding="@dimen/_8sdp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fb_attach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_72sdp"
+            android:backgroundTint="#5C5C5C"
+            android:src="@drawable/attach"
+            app:elevation="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+

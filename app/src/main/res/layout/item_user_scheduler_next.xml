@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="schedule"
+            type="com.tivasoft.biconui.data.model.network.responses.doctor.Schedule" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_6sdp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.12" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontal_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/schedule_icon"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:background="@drawable/rounded_edit_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/session_type_icon"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/rounded_cyan"
+            app:setScheduleTypeIcon="@{schedule.connectionType}"
+            app:layout_constraintBottom_toBottomOf="@id/horizontal_guide"
+            app:layout_constraintEnd_toEndOf="@id/vertical_guide"
+            app:layout_constraintStart_toStartOf="@id/vertical_guide"
+            app:layout_constraintTop_toTopOf="@id/horizontal_guide" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/patientName"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:fontFamily="@font/metropolislight"
+            android:text="@{schedule.description}"
+            android:textColor="@color/white"
+            android:maxLength="20"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/schedule_icon"
+            app:layout_constraintStart_toEndOf="@id/schedule_icon"
+            app:layout_constraintTop_toTopOf="@id/schedule_icon" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/session_type"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/metropolismedium"
+            android:minWidth="@dimen/_84sdp"
+            app:setScheduleType="@{schedule.connectionType}"
+            android:textColor="@color/cyan"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintBottom_toBottomOf="@id/schedule_icon"
+            app:layout_constraintStart_toStartOf="@id/patientName" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/schedule_time"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/metropolismedium"
+            android:gravity="end"
+            android:minWidth="@dimen/_84sdp"
+            android:textColor="@color/cyan"
+            android:textSize="@dimen/_8ssp"
+            app:date="@{schedule.startTime}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/session_type" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

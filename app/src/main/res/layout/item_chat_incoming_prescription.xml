@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="message"
+            type="com.tivasoft.biconui.data.model.local.ui.Message" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_6sdp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_v_75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_test_item"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_v_75"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/prescription_icon"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@color/black"
+                android:insetTop="0dp"
+                app:cornerRadius="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:spinning_bar_color="@color/black"
+                app:strokeColor="@color/background" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/prescription_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/metropolisregular"
+                android:text="@{message.contentType.type.toUpperCase()}"
+                android:textColor="@color/biconGrayLow"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toEndOf="@id/prescription_icon"
+                app:layout_constraintTop_toTopOf="@id/prescription_icon" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/prescription_name"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:fontFamily="@font/metropolislight"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@id/prescription_icon"
+                app:layout_constraintEnd_toStartOf="@id/action_indicator"
+                app:layout_constraintStart_toEndOf="@id/prescription_icon"
+                app:layout_constraintTop_toBottomOf="@id/prescription_type"
+                app:setPrescriptionName="@{message}" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/action_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_forward"
+                android:tint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/chat_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/metropolislight"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_7ssp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/action_indicator"
+                app:layout_constraintTop_toBottomOf="@id/prescription_name"
+                app:setChatTime="@{message.time}" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

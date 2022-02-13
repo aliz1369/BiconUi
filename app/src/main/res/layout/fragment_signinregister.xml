@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?><!--welcome screen of app-->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/_10sdp"
+        android:fillViewport="true">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <VideoView
+                    android:id="@+id/vv_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/cl_dark_fade"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#80000000"
+                    android:visibility="gone" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_main_signin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_welcome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_32sdp"
+                        android:fontFamily="@font/metropolislight"
+                        android:text="@string/welcome_to"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_26ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_logo"
+                        android:layout_width="@dimen/_130sdp"
+                        android:layout_height="@dimen/_130sdp"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:src="@drawable/logo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
+
+                    <TextView
+                        android:id="@+id/tv_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_120sdp"
+                        android:fontFamily="@font/metropolismedium"
+                        android:lineSpacingExtra="5dp"
+                        android:paddingHorizontal="@dimen/_32sdp"
+                        android:text="@string/a_community_where_you_receive_easy_therapy_and_communicate_conveniently_with_your_therapist_at_any_time"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toTopOf="@id/tv_register"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+                    <TextView
+                        android:id="@+id/tv_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_30sdp"
+                        android:fontFamily="@font/metropolismedium"
+                        android:text="@string/you_can_register_directly_using_the_following_direct_links"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9ssp"
+                        app:layout_constraintBottom_toTopOf="@id/btn_sign_in"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+                    <!--go to sign in-->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_sign_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_55sdp"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_10ssp"
+                        android:backgroundTint="@color/turquoise"
+                        android:fontFamily="@font/metropolismedium"
+                        android:letterSpacing="0"
+                        android:text="@string/sign_in"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_20ssp"
+                        app:cornerRadius="@dimen/_10ssp"
+                        app:layout_constraintBottom_toTopOf="@id/btn_register"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <!--go to register-->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_55sdp"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/metropolismedium"
+                        android:letterSpacing="0"
+                        android:text="@string/register"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_20ssp"
+                        app:cornerRadius="@dimen/_10ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_signin_enterphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:padding="@dimen/_20sdp"
+                    android:visibility="gone">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/back_to_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_back_to_main"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_back"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_back_to_main"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/back"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="@id/iv_back_to_main"
+                            app:layout_constraintStart_toEndOf="@id/iv_back_to_main"
+                            app:layout_constraintTop_toTopOf="@id/iv_back_to_main" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/tv_sign_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_36ssp"
+                        android:fontFamily="@font/metropolisregular"
+                        android:text="@string/phone_number"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_28ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_enter_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/metropolismedium"
+                        android:text="@string/please_enter_you_user_name"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toTopOf="@id/et_phone_number"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_sign_in" />
+                    <!--phone number input-->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/rounded_edit_text_2"
+                        android:elevation="5dp"
+                        android:hint="+861234567890"
+                        android:inputType="phone"
+                        android:maxLength="13"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textColorHint="#66555957"
+                        android:textSize="@dimen/_20sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_enter_user_name"
+                        tools:targetApi="lollipop" />
+                    <!--to next step-->
+                    <Button
+                        android:id="@+id/btn_confirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="50dp"
+                        android:background="@drawable/rounded_button"
+                        android:backgroundTint="@color/turquoise"
+                        android:fontFamily="@font/metropolismedium"
+                        android:letterSpacing="0"
+                        android:text="@string/confirm"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_20ssp"
+                        app:layout_constraintEnd_toEndOf="@id/et_phone_number"
+                        app:layout_constraintStart_toStartOf="@id/et_phone_number"
+                        app:layout_constraintTop_toBottomOf="@id/et_phone_number" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_main_enterconfirmcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:padding="@dimen/_20sdp"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/back_to_enterphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_back_to_enterphone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_back"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_back_to_enterphone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/back"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="@id/iv_back_to_enterphone"
+                            app:layout_constraintStart_toEndOf="@id/iv_back_to_enterphone"
+                            app:layout_constraintTop_toTopOf="@id/iv_back_to_enterphone" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_enter_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_36sdp"
+                        android:fontFamily="@font/metropolisregular"
+                        android:text="@string/enter_code"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_25ssp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/tv_enter_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/metropolismedium"
+                        android:lineSpacingExtra="5dp"
+                        android:text="@string/a_code_will_be_sent_to_the_phone_you_entered_by_sms_please_input_the_4_letter_text"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_enter_code"
+                        app:layout_constraintRight_toRightOf="@id/tv_enter_code"
+                        app:layout_constraintTop_toBottomOf="@id/tv_enter_code" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_change_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:drawableStart="@drawable/edit"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawableTint="@color/white"
+                        android:fontFamily="@font/metropolislight"
+                        android:text="09378250210"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16ssp"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_enter_number"
+                        app:layout_constraintRight_toRightOf="@id/tv_enter_number"
+                        app:layout_constraintTop_toBottomOf="@id/tv_enter_number" />
+
+
+                    <EditText
+                        android:id="@+id/et_number_1"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginTop="70dp"
+                        android:background="@drawable/rounded_edit_text_2"
+                        android:elevation="5dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_enter_number"
+                        app:layout_constraintRight_toLeftOf="@id/et_number_2"
+                        app:layout_constraintTop_toBottomOf="@id/tv_enter_number"
+                        tools:targetApi="lollipop">
+
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/et_number_2"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginTop="70dp"
+                        android:background="@drawable/rounded_edit_text_2"
+                        android:elevation="5dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toRightOf="@id/et_number_1"
+                        app:layout_constraintRight_toLeftOf="@id/et_number_3"
+                        app:layout_constraintTop_toBottomOf="@id/tv_enter_number">
+
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/et_number_3"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginTop="70dp"
+                        android:background="@drawable/rounded_edit_text_2"
+                        android:elevation="5dp"
+                        android:fontFamily="@font/metropolislight"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toRightOf="@id/et_number_2"
+                        app:layout_constraintRight_toLeftOf="@id/et_number_4"
+                        app:layout_constraintTop_toBottomOf="@id/tv_enter_number">
+
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/et_number_4"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginTop="70dp"
+                        android:background="@drawable/rounded_edit_text_2"
+                        android:elevation="5dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toRightOf="@id/et_number_3"
+                        app:layout_constraintRight_toLeftOf="@id/et_number_5"
+                        app:layout_constraintTop_toBottomOf="@id/tv_enter_number" />
+
+                    <EditText
+                        android:id="@+id/et_number_5"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginTop="70dp"
+                        android:background="@drawable/rounded_edit_text_2"
+                        android:elevation="5dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toRightOf="@id/et_number_4"
+                        app:layout_constraintRight_toLeftOf="@id/et_number_6"
+                        app:layout_constraintTop_toBottomOf="@id/tv_enter_number" />
+
+                    <EditText
+                        android:id="@+id/et_number_6"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginTop="70dp"
+                        android:background="@drawable/rounded_edit_text_2"
+                        android:elevation="5dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toRightOf="@id/et_number_5"
+                        app:layout_constraintRight_toRightOf="@id/tv_enter_number"
+                        app:layout_constraintTop_toBottomOf="@id/tv_enter_number" />
+
+                    <!--navigate to app-->
+                    <Button
+                        android:id="@+id/btn_send_again"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginTop="50dp"
+                        android:background="@drawable/rounded_button"
+                        android:backgroundTint="@color/turquoise"
+                        android:fontFamily="@font/metropolismedium"
+                        android:text="@string/send_again"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintLeft_toLeftOf="@id/et_number_1"
+                        app:layout_constraintRight_toRightOf="@id/et_number_4"
+                        app:layout_constraintTop_toBottomOf="@id/et_number_1">
+
+                    </Button>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/progress_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:fontFamily="@font/metropolislight"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp"
+                        app:layout_constraintEnd_toEndOf="@id/btn_send_again"
+                        app:layout_constraintStart_toStartOf="@id/btn_send_again"
+                        app:layout_constraintTop_toBottomOf="@id/btn_send_again" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_signin_loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:padding="20dp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_logo1"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_130sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:fontFamily="@font/metropolisbold"
+                    android:text="@string/creating_a_secure_profile"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_logo1" />
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10ssp"
+                    app:indicatorColor="@color/turquoise"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv1"
+                    app:trackColor="@color/white"
+                    app:trackCornerRadius="@dimen/_10ssp"
+                    app:trackThickness="@dimen/_8sdp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="#242424"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/expand_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:layout_marginBottom="@dimen/_55sdp"
+            android:backgroundTint="#2c3037"
+            android:fontFamily="@font/metropolismedium"
+            android:paddingVertical="@dimen/_14sdp"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_16ssp"
+            app:cornerRadius="@dimen/_6sdp"
+            app:layout_constraintBottom_toTopOf="@id/rl1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_84sdp"
+            android:background="@drawable/menu_top_round"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/bottomsheet_register"
+        layout="@layout/fragment_register" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
+
+

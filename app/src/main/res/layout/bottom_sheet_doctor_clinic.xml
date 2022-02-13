@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_sheet_clinic_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/rounded_button_grey"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="@dimen/_240sdp"
+        app:layout_behavior="com.tivasoft.biconui.utils.TopSheetBehavior"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/clinic_icon"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rounded_edit_text" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/clinic_name"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="doctor's Name's Clinic"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/clinic_icon"
+            app:layout_constraintStart_toEndOf="@id/clinic_icon"
+            app:layout_constraintTop_toTopOf="@id/clinic_icon" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/slider_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/metropolisregular"
+            android:text="@string/office_photo"
+            android:textColor="@color/biconGrayLow"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/clinic_icon"
+            app:layout_constraintTop_toBottomOf="@id/clinic_icon" />
+
+        <LinearLayout
+            android:id="@+id/clinic_image_slider_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_240sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@color/profile_background"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider_label">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/profile_background" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/profile_background"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp" />
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/clinic_availability"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/metropolislight"
+            android:text="Available Now"
+            android:textColor="@color/biconGrayLow"
+            android:textSize="@dimen/_16ssp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clinic_image_slider_layout" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/degree_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/metropolisregular"
+            android:text="@string/degree"
+            android:textColor="@color/biconGrayLow"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/clinic_icon"
+            app:layout_constraintTop_toBottomOf="@id/clinic_availability" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/metropolislight"
+            android:text="Michigan University, USA"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/degree_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/distance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/metropolisregular"
+            android:text="@string/distance"
+            android:textColor="@color/biconGrayLow"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/clinic_icon"
+            app:layout_constraintTop_toBottomOf="@id/degree" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/metropolislight"
+            android:text="7.3 km away"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/distance_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/book_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/metropolisregular"
+            android:text="Book a face to face session"
+            android:textColor="@color/biconGrayLow"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/distance" />
+
+        <Button
+            android:id="@+id/book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/rounded_gradient_orange"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="320"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/book_label" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/drag_handle"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/drag_handle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/book" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

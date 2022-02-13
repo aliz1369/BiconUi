@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/signInFragment">
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.tivasoft.biconui.ui.auth.signin_register.SignInFragment"
+        android:label="signin_fragment"
+        tools:layout="@layout/fragment_signinregister">
+        <action
+            android:id="@+id/action_signInFragment_to_profile_nav_graph"
+            app:destination="@id/profile_nav_graph"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/wait_anim" />
+    </fragment>
+    <include app:graph="@navigation/profile_nav_graph" />
+
+</navigation>

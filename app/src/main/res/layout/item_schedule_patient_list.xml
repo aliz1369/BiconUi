@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="patient"
+            type="com.tivasoft.biconui.data.model.network.responses.doctor.AllPatientData" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_16sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/patient_icon"
+            android:layout_width="@dimen/_44sdp"
+            android:layout_height="@dimen/_44sdp"
+            app:layout_constraintEnd_toEndOf="@id/patient_name"
+            app:layout_constraintStart_toStartOf="@id/patient_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setRoundedImageFromUrl="@{patient.patientIconUrl}"
+            app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/patient_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/metropolismedium"
+            android:gravity="center"
+            android:text="@{patient.patientName}"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/patient_icon" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

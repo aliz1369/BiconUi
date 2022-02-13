@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.patient.map.MapFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:animateLayoutChanges="true"
+        android:layout_height="match_parent">
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.mancj.materialsearchbar.MaterialSearchBar
+            android:id="@+id/map_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:fontFamily="@font/metropolismedium"
+            app:mt_hint="Search"
+            app:mt_placeholder="Search"
+            app:mt_placeholderColor="@color/white"
+            app:mt_hintColor="@color/white"
+            android:padding="@dimen/_12sdp"
+            app:mt_textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:mt_searchBarColor="@color/profile_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:mt_maxSuggestionsCount="0">
+
+        </com.mancj.materialsearchbar.MaterialSearchBar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_district_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            app:layout_constraintTop_toBottomOf="@id/map_search"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="@dimen/_28sdp"
+            android:layout_marginEnd="@dimen/_28sdp"
+            android:visibility="gone"/>
+
+
+
+        <include
+            android:id="@+id/bottom_sheet_clinic"
+            layout="@layout/bottom_sheet_doctor_clinic"
+            android:visibility="gone" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EBEBEB"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf= "parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/name"
+            android:layout_marginTop="50dp"
+            android:textSize="@dimen/_20ssp"
+            android:fontFamily="@font/metropolisregular"
+            android:textColor="#5c5c5c">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_enter_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintLeft_toLeftOf="@id/tv_name"
+            app:layout_constraintRight_toRightOf="@id/tv_name"
+            android:layout_marginTop="30dp"
+            android:textSize="@dimen/_15ssp"
+            android:textAlignment="center"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/please_write_your_full_name"
+            android:textColor="#5b5b5b
+
+">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_name_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_user_name"
+            app:layout_constraintLeft_toLeftOf="@id/tv_enter_user_name"
+            app:layout_constraintRight_toRightOf="@id/tv_enter_user_name"
+            android:layout_marginTop="20dp"
+            android:textSize="@dimen/_12ssp"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:fontFamily="@font/metropolismedium"
+            android:textColor="#5b5b5b"
+            android:text="@string/this_name_will_be_shared_only_with_you_patient_and_other_specialists_by_your_agreement_of_our_terms_of_conditions">
+        </TextView>
+
+
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_detail"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:elevation="5dp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_edit_text_2"
+            tools:targetApi="lollipop">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:layout_constraintTop_toBottomOf="@id/et_number"
+            android:background="@drawable/rounded_button_2"
+            app:layout_constraintLeft_toLeftOf="@id/et_number"
+            app:layout_constraintRight_toRightOf="@id/et_number"
+            android:layout_marginTop="50dp"
+            android:text="@string/confirm"
+            android:fontFamily="@font/metropolismedium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textAllCaps="false">
+
+        </Button>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+

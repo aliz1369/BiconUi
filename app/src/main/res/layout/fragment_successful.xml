@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EBEBEB"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/your_all_set"
+        android:fontFamily="@font/metropolisregular"
+        android:textSize="@dimen/_28ssp"
+        android:layout_marginTop="50dp"
+        android:textColor="#5c5c5c">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/iv_ok"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_done"
+        app:layout_constraintBottom_toTopOf="@id/tv_pass"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/pass"
+        app:tint="@color/green">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_ok"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_start_using"
+        android:layout_marginTop="80dp"
+        android:textAlignment="center"
+        android:textColor="#5b5b5b"
+        android:lineSpacingExtra="5dp"
+        android:textSize="@dimen/_16ssp"
+        android:fontFamily="@font/metropolismedium"
+        android:text="@string/you_have_successfully_finished_the_registration_process_you_can_start_using_our_platform_and_talk_to_our_therapist_now">
+    </TextView>
+
+    <Button
+        android:id="@+id/btn_start_using"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_pass"
+        android:background="@drawable/ic_blue_button_view"
+        app:layout_constraintLeft_toLeftOf="@id/tv_pass"
+        app:layout_constraintRight_toRightOf="@id/tv_pass"
+        android:layout_marginTop="60dp"
+        android:text="@string/start_using"
+        android:fontFamily="@font/metropolismedium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        android:textAllCaps="false">
+
+    </Button>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

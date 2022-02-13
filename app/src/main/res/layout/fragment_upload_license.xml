@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/welcome_bg"
+    android:padding="@dimen/_16sdp">
+
+    <TextView
+        android:id="@+id/tv_license"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/metropolisregular"
+        android:text="@string/upload_your_medical_license"
+        android:textAlignment="center"
+        android:textColor="#6F6F6F"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_license_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:fontFamily="@font/metropolismedium"
+        android:lineSpacingExtra="@dimen/_5sdp"
+        android:text="@string/provide_you_license_document_will_put_you_in_audit_section_which_let_us_evaluate_your_experience_and_pricing_section_within_72_hours_you_can_read_more_here"
+        android:textAlignment="center"
+        android:textColor="#5b5b5b"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_license" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/ck_assintans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:button="@drawable/custom_checkbox"
+        android:elevation="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="@id/tv_license_desc"
+        app:layout_constraintTop_toBottomOf="@id/tv_license_desc" />
+
+    <TextView
+        android:id="@+id/tv_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:fontFamily="@font/metropolismedium"
+        android:text="@string/apply_for_assistance"
+        android:textColor="#666666"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBottom_toBottomOf="@id/ck_assintans"
+        app:layout_constraintStart_toEndOf="@id/ck_assintans"
+        app:layout_constraintTop_toTopOf="@id/ck_assintans" />
+
+    <TextView
+        android:id="@+id/tv_about_assistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/metropolismedium"
+        android:lineSpacingExtra="@dimen/_5sdp"
+        android:text="@string/becoming_assistance_will_give_you_access_to_doctors_with_many_clients_you_will_see_you_patient_as_their_patient_and_will_get_allegeable_to_talk_as_behalf_of_them_without_clients_knowing_you_will_get_a_cut_from_the_profit_made_by_main_doctors_revenue"
+        android:textAlignment="textStart"
+        android:textColor="#5b5b5b"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_apply" />
+
+    <ImageButton
+        android:id="@+id/ib_gallery"
+        android:layout_width="@dimen/_56sdp"
+        android:layout_height="@dimen/_56sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:background="@drawable/button_shape"
+        android:src="@drawable/galleryy"
+        app:layout_constraintEnd_toEndOf="@id/gallery_label"
+        app:layout_constraintStart_toStartOf="@id/gallery_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_about_assistance" />
+
+    <TextView
+        android:id="@+id/gallery_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/metropolissemibold"
+        android:text="@string/photo_gallery"
+        android:textColor="#5b5b5b"
+        app:layout_constraintStart_toStartOf="@id/tv_about_assistance"
+        app:layout_constraintTop_toBottomOf="@id/ib_gallery" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_files"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        app:layout_constraintBottom_toTopOf="@id/btn_next"
+        app:layout_constraintEnd_toStartOf="@id/camera_label"
+        app:layout_constraintStart_toEndOf="@id/gallery_label"
+        app:layout_constraintTop_toTopOf="@id/ib_gallery" />
+
+    <ImageButton
+        android:id="@+id/ib_camera"
+        android:layout_width="@dimen/_56sdp"
+        android:layout_height="@dimen/_56sdp"
+        android:background="@drawable/button_shape"
+        android:src="@drawable/cameraa"
+        app:layout_constraintEnd_toEndOf="@id/camera_label"
+        app:layout_constraintStart_toStartOf="@id/camera_label"
+        app:layout_constraintTop_toTopOf="@id/ib_gallery" />
+
+    <TextView
+        android:id="@+id/camera_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/metropolissemibold"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:text="@string/camera"
+        android:textColor="#5b5b5b"
+        app:layout_constraintEnd_toEndOf="@id/tv_about_assistance"
+        app:layout_constraintTop_toBottomOf="@id/ib_camera" />
+
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="@drawable/rounded_button_2"
+        android:fontFamily="@font/metropolismedium"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:spinning_bar_color="#49A8EC"
+        app:spinning_bar_padding="@dimen/_8sdp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

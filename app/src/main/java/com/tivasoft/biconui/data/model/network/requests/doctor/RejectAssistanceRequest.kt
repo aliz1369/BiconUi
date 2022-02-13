@@ -1,0 +1,5 @@
+package com.tivasoft.biconui.data.model.network.requests.doctor
+
+data class RejectAssistanceRequest(
+    val id: String
+)

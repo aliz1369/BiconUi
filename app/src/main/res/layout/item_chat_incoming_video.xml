@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="message"
+            type="com.tivasoft.biconui.data.model.local.ui.Message" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_6sdp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_v_75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/chat_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="@dimen/_220sdp"
+            android:maxHeight="@dimen/_200sdp"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setVideoImage="@{message.content}" />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressImageButton
+            android:id="@+id/play"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_download"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/chat_image"
+            app:layout_constraintEnd_toEndOf="@id/chat_image"
+            app:layout_constraintStart_toStartOf="@id/chat_image"
+            app:layout_constraintTop_toTopOf="@id/chat_image"
+            app:playVideo="@{message.content}"
+            app:spinning_bar_color="@color/white" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/chat_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/metropolislight"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/chat_image"
+            app:layout_constraintEnd_toEndOf="@id/chat_image"
+            app:setChatTime="@{message.time}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

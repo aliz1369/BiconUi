@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_56sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/icon_neutral_64"/>
+
+    <TextView
+        android:id="@+id/tv_patient_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:text="Patient Name"
+        android:textSize="@dimen/_18ssp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/metropolismedium"/>
+
+
+    <Button
+        android:id="@+id/ib_back"
+        android:layout_width="@dimen/_54sdp"
+        android:layout_height="@dimen/_54sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:background="@drawable/rounded"
+        android:backgroundTint="#9E8C8C"
+        android:alpha="45"
+        android:drawableTop="@drawable/ic_up"
+        android:text="Back"
+        android:textSize="@dimen/_8ssp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/metropolismedium"
+        android:padding="@dimen/_12sdp"/>
+
+    <ImageButton
+        android:id="@+id/ib_voice_call"
+        android:layout_width="@dimen/_54sdp"
+        android:layout_height="@dimen/_54sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ib_back"
+        android:src="@drawable/ic_phone"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:background="@drawable/rounded"
+        android:backgroundTint="@color/md_red_500"/>
+
+    <ImageButton
+        android:id="@+id/ib_video_call"
+        android:layout_width="@dimen/_54sdp"
+        android:layout_height="@dimen/_54sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/ic_videocam"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_marginEnd="@dimen/_50sdp"
+        android:background="@drawable/rounded"
+        android:backgroundTint="#4A4646"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

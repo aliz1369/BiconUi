@@ -1,0 +1,297 @@
+<resources>
+    <string name="app_name">Bicon</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="please_enter_you_phone_number_to_enter">Please enter you phone number To enter</string>
+    <string name="confirm">Confirm</string>
+    <string name="enter_code">Enter Code</string>
+    <string name="a_code_will_be_sent_to_the_phone_you_entered_by_sms_please_input_the_4_letter_text">A Code will be sent to the phone you Entered by SMS. please input the 4 letter Text</string>
+    <string name="send_again">Send Again</string>
+    <string name="name">Name</string>
+    <string name="please_write_your_user_name">Please write your user name</string>
+    <string name="this_name_will_be_shared_only_with_you_doctor_and_other_specialists_by_your_agreement_of_our_terms_of_conditions">This name will be shared only with you doctor And other specialists by your agreement of our Terms of Conditions</string>
+    <string name="your_all_set">Your all set</string>
+    <string name="you_have_successfully_finished_the_registration_process_you_can_start_using_our_platform_and_talk_to_our_therapist_now">You have successfully finished the Registration process. You can Start using our platform and talk To our therapist now.</string>
+    <string name="start_using">Start Using</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="beacon">Beacon</string>
+    <string name="psychology_platform">Psychology Platform</string>
+    <string name="a_community_where_you_receive_easy_therapy_and_communicate_conveniently_with_your_therapist_at_any_time">A community where you receive easy therapy and communicate conveniently with your therapist At any time.</string>
+    <string name="you_can_register_directly_using_the_following_direct_links">You can Register directly using the following direct links</string>
+    <string name="or_you_can_sign_in_as_therapist_or_with_you_previous_account">Or you can Sign In as therapist or with you previous account</string>
+    <string name="sign_in">Sign in</string>
+    <string name="register_as_therapist">Register as Therapist</string>
+    <string name="wechat_register">wechat register</string>
+    <string name="mobile_register">mobile register</string>
+    <string name="another_register">another register</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="write_your_full_name">Write your Full Name</string>
+    <string name="next">Next</string>
+    <string name="password">Password</string>
+    <string name="please_enter_your_password">Please enter your password</string>
+    <string name="upload_your_medical_license">Upload your Medical License</string>
+    <string name="provide_you_license_document_will_put_you_in_audit_section_which_let_us_evaluate_your_experience_and_pricing_section_within_72_hours_you_can_read_more_here">Provide you license document Will put you in audit section which let us evaluate your experience And pricing section within 72 hours You can read more here</string>
+    <string name="apply_for_assistance">Apply for Assistance</string>
+    <string name="becoming_assistance_will_give_you_access_to_doctors_with_many_clients_you_will_see_you_patient_as_their_patient_and_will_get_allegeable_to_talk_as_behalf_of_them_without_clients_knowing_you_will_get_a_cut_from_the_profit_made_by_main_doctors_revenue">Becoming assistance will give you access to doctors With Many clients. You will see you patient as their patient and will get allegeable to talk as behalf of them without clients knowing.You will get a cut from the profit made by main doctors revenue</string>
+    <string name="photo_gallery">Photo Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="by_finalizing_the_information_above_ans_clicking_confirm_you_will_agree_on_our_term_of_conditions">By finalizing the information above and clicking confirm, you will agree on Our term of conditions.</string>
+    <string name="owner">Owner</string>
+    <string name="manager">Manager</string>
+    <string name="employee">Employee</string>
+    <string name="career_category">Career Category</string>
+    <string name="_39_52">39-52</string>
+    <string name="_26_38">26-38</string>
+    <string name="_17_25">17-25</string>
+    <string name="describe_you_age_group">Describe you age group</string>
+    <string name="other">Other</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="what_is_you_gender">What is you gender</string>
+    <string name="basics">Basics</string>
+    <string name="please_enter_you_user_name">Please enter your Phone Number</string>
+    <string name="please_write_your_user_name_and_password">Please write your Phone Number and Password</string>
+    <string name="you_have_successfully_finished_the_registration_process_you_can_to_our_therapists_now">You have successfully finished the Registration process. You can To our therapists now.</string>
+
+    <string name="title_profile">Profile</string>
+    <string name="Schedule">Schedule</string>
+
+    <string name="this_name_will_be_shared_only_with_you_patient_and_other_specialists_by_your_agreement_of_our_terms_of_conditions">This name will be shared only with you patient And other specialists by your agreement of our Terms of Conditions</string>
+    <string name="please_write_your_full_name">Please write your full name</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="please_write_your_new_password">Please write your new password</string>
+    <string name="assistance_information">Assistance Information</string>
+    <string name="please_write_about_you">please write about you</string>
+    <string name="file">File</string>
+    <string name="doctors">Doctors</string>
+    <string name="couples_counseling">Couple\'s Counseling</string>
+    <string name="parenting">Parenting</string>
+    <string name="clinical_disorder">Clinical Disorder</string>
+    <string name="elderly">Elderly</string>
+    <string name="search_by_map">Search By Map</string>
+    <string name="title_prescriptions">Prescriptions</string>
+
+    <string name="filter">Filter</string>
+    <string name="please_write_your_phon_number">Please write your phone number</string>
+    <string name="title_prescription">Prescription</string>
+    <string name="search">Search</string>
+    <string name="typing_search">Typing Search</string>
+    <string name="ok">Ok</string>
+    <string name="photo">Photo</string>
+    <string name="call">Call</string>
+    <string name="files">Files</string>
+    <string name="voice">Voice</string>
+    <string name="username_error">Username Cannot be less than 8 Characters.</string>
+    <string name="empty_filed">This field can not be empty</string>
+    <string name="name_error">Name Cannot be Empty.</string>
+    <string name="password_error">Password Cannot be less than 8 Characters and must Contains at least one Number and one Capital letter.</string>
+
+
+    <string name="enter_code_error">Please Enter Code</string>
+    <string name="phone_number_empty">Please Enter Phone Number</string>
+    <string name="wront_phone_number_format">Incorrect Format.</string>
+    <string name="location">Location</string>
+    <string name="specialty">Specialty</string>
+    <string name="class_title">Class</string>
+    <string name="general">General</string>
+    <string name="specialist">Specialist</string>
+    <string name="expert">Expert</string>
+    <string name="local">Local</string>
+    <string name="National">National</string>
+    <string name="clear">Clear</string>
+
+    <string name="about_empty">field is requierd</string>
+
+    <string name="field_is_required">Field is Required.</string>
+    <string name="book">Book</string>
+    <string name="degree">Degree</string>
+    <string name="next_on_schedule">Next on Schedule</string>
+    <string name="distance">Distance</string>
+    <string name="office_photo">Office Photo</string>
+
+    <string name="schedule">Schedule</string>
+
+    <string name="video_call">Video Call</string>
+    <string name="chat">Chat</string>
+    <string name="voice_call">Voice Call</string>
+    <string name="patient_list_title">Choose a patient to Schedule a Session</string>
+    <string name="schedule_with">Schedule with</string>
+    <string name="submit">Submit</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="optional">(Optional)</string>
+    <string name="account_information">Account Information</string>
+
+    <string name="email">Email</string>
+    <string name="add_address">Add address</string>
+    <string name="commission">Commission</string>
+    <string name="address_information">Address Information</string>
+    <string name="clinic_name">clinic name</string>
+    <string name="address">address</string>
+    <string name="clinic_name_2">Clinic name</string>
+    <string name="phone_number_2">Phone number</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="current_mood_level">Current Mood Level</string>
+
+
+    <string name="send_again_error">Text Input Incorrect</string>
+    <string name="send_again_indicator">A text message has been sent to the number %1$s. you can resend in %2$d seconds.</string>
+    <string name="tests_name">Tests Name</string>
+    <string name="settings">settings</string>
+    <string name="title_attachments">Attachments</string>
+    <string name="title_general_settings">General Settings</string>
+    <string name="title_account_security">Account Security</string>
+    <string name="title_settings">Settings</string>
+    <string name="need_assistance">Need assistance ?</string>
+    <string name="clinic_address">Address</string>
+    <string name="agree_confirm">Agree &amp; Confirm</string>
+    <string name="view_tutorial">View Tutorial</string>
+    <string name="start">Start</string>
+    <string name="back">Back</string>
+    <string name="doctor_s_name">doctor\'s Name</string>
+    <string name="look_for_assistant">Look for Assistant</string>
+    <string name="expand_more">Expand More</string>
+    <string name="book_appointment">Book Appointment</string>
+    <string name="gender">Gender</string>
+    <string name="grade">Grade</string>
+    <string name="find_doctor">Find Doctor</string>
+    <string name="search_doctor">Search Doctor</string>
+    <string name="mood_level">Mood Level</string>
+    <string name="please_write_your_password">Please write your password</string>
+    <string name="you_will_need_a_password_the_next_time_you_want_to_log_in">You will need a password the next time you want to log in</string>
+    <string name="assign">Assign</string>
+    <string name="submit_results">Submit Results</string>
+    <string name="describe_you_mood_after_exercise">Describe you mood after exercise.</string>
+    <string name="send">Send</string>
+    <string name="ask_your_doctor">Ask your doctor</string>
+    <string name="cancel">Cancel</string>
+    <string name="text_true">True</string>
+    <string name="text_false">False</string>
+    <string name="online">Online</string>
+    <string name="presence">Presence</string>
+    <string name="consulting">Consulting</string>
+    <string name="today">Today</string>
+    <string name="item_type">Item type</string>
+    <string name="game">Game</string>
+    <string name="time_or_count">Time or Count</string>
+    <string name="count">Count</string>
+    <string name="time">Time</string>
+    <string name="add_item">Add Item</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="expiration_time">Expiration time</string>
+    <string name="price">Price</string>
+    <string name="add_package">Add Package</string>
+    <string name="package_list">Package List</string>
+    <string name="there_s_no_schedule_at_this_date">there\'s no schedule at this date</string>
+
+    <string name="assistance_list">Assistance List</string>
+    <string name="save">Save</string>
+
+    <string name="finish">Finish</string>
+    <string name="test_result">Test Result</string>
+    <string name="test_next">Next (%1$d/%2$d)</string>
+    <string name="test_score">Your Score is: %1$d</string>
+    <string name="schedule_more_indicator">%1$d More Schedules"</string>
+    <string name="schedule_no_more">There\'s No More Schedules</string>
+
+    <string name="reject">Reject</string>
+    <string name="look_for_doctor">Look For Doctor</string>
+    <string name="doctor_list">Doctor List</string>
+    <string name="schedule_in_past_error">Schedule start time must be in the future.</string>
+    <string name="doctor">Doctor</string>
+    <string name="assistance">Assistance</string>
+
+    <string name="field_and_degree">%1$s, %2$s</string>
+    <string name="breath">Breath</string>
+    <string name="breath_instruction">Take a deep breath according to pattern</string>
+    <string name="exit">Exit</string>
+    <string name="exit_message">Do You want to Exit?</string>
+    <string name="logout">Logout</string>
+    <string name="repeat">Repeat</string>
+    <string name="title_video_call">Video Call</string>
+    <string name="title_video">Video</string>
+    <string name="camera_chooser">Capture Image or Video</string>
+
+    <string name="something_went_wrong">Something went wrong.</string>
+    <string name="media_not_supported">Media Not Supported.</string>
+    <string name="title_packages">Package List</string>
+    <string name="title_create_packages">Create Package</string>
+    <string name="items_empty_error">Item List cannot be empty</string>
+    <string name="title_admin_packages">Admin Package List</string>
+    <string name="activate">Activate</string>
+    <string name="deactivate">Deactivate</string>
+    <string name="unexpected_error">an unexpected error occurred.</string>
+    <string name="gallery">gallery</string>
+    <string name="name_label">Name:</string>
+    <string name="phone_label">Phone Number:</string>
+    <string name="description_label">Description:</string>
+    <string name="accept">Accept</string>
+    <string name="education_field">education field:</string>
+    <string name="education_degree">education degree:</string>
+    <string name="commission_error">Please enter a valid rate.</string>
+    <string name="no_suitable_app_found">No suitable application found to open this file.</string>
+    <string name="go_to_today">Go To Today</string>
+    <string name="upload_in_progress">Upload in progress…</string>
+    <string name="recording_timer">Recording… %1$s</string>
+    <string name="assistant_patient_list_error">You can not %1$s the patient!</string>
+    <string name="empty_upload_error">You have to upload your license and medical diploma</string>
+    <string name="number_hint">861 0000000000</string>
+    <string name="register">Register</string>
+    <string name="a_code_will_be_sent_to_the_phone_you_entered_by_sms">A code will be sent to the phone you Entered by SMS</string>
+    <string name="confirm_as_user">Confirm as User</string>
+    <string name="slide_to_sign_as_doctor">Slide to Sign as Doctor</string>
+    <string name="profile_photo">Profile Photo</string>
+    <string name="required">Required</string>
+    <string name="nickname">Nickname</string>
+    <string name="optional_2">Optional</string>
+    <string name="education">Education</string>
+    <string name="residing_city">Residing City</string>
+    <string name="birthday">Birthday</string>
+    <string name="creating_a_secure_profile">Creating a secure profile</string>
+    <string name="create_profile">Create Profile</string>
+    <string name="shoot">Shoot</string>
+    <string name="choice_from_gallery">Choice from gallery</string>
+    <string name="id_verification">ID Verification</string>
+    <string name="education_certificate">Education Certificate</string>
+
+    <string-array name="tests">
+        <item>test1</item>
+        <item>test2</item>
+        <item>test3</item>
+        <item>test4</item>
+        <item>test5</item>
+    </string-array>
+    <string-array name="connectionType">
+        <item>Voice Call</item>
+        <item>Video Call</item>
+        <item>Chat</item>
+    </string-array>
+
+
+    <string-array name="my_header_title">
+        <item></item>
+
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+        <item>Sun</item>
+    </string-array>
+
+    <string-array name="consulting">
+        <item>Online</item>
+        <item>Presence</item>
+    </string-array>
+
+    <string-array name="classTypes">
+        <item>General</item>
+        <item>Specialist</item>
+        <item>Expert</item>
+    </string-array>
+
+
+
+</resources>

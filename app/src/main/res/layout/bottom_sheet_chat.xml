@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?><!--chat ui-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_86sdp"
+        android:background="@drawable/menu_top_round"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/drag_handle"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/drag_handle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/chat_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_back"
+                android:fontFamily="@font/metropolisregular"
+                android:gravity="center"
+                android:text="@string/back"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:drawableTint="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/name"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/_6sdp"
+                android:fontFamily="@font/metropolisregular"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_groupchat_itemholder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/background"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar_layout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/conversation_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:focusableInTouchMode="true"
+            app:reverseLayout="true" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingVertical="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_groupchat_itemholder">
+
+
+        <ImageView
+            android:id="@+id/backpack"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:src="@drawable/attachment_chat"
+            app:layout_constraintBottom_toBottomOf="@id/chat_edittext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/chat_edittext" />
+
+        <ImageView
+            android:id="@+id/chat_action_call"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:src="@drawable/add_chat"
+            app:layout_constraintBottom_toBottomOf="@id/chat_edittext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/chat_edittext" />
+
+        <EditText
+            android:id="@+id/chat_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/chat_edittext"
+            android:elevation="@dimen/_2sdp"
+            android:ems="12"
+            android:fontFamily="@font/metropolisregular"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_12sdp"
+            android:scrollbars="vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintBottom_toTopOf="@id/extra_actions_layout"
+            app:layout_constraintEnd_toStartOf="@id/chat_action_call"
+            app:layout_constraintStart_toEndOf="@id/backpack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/extra_actions_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_8sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chat_edittext">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_v_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.15" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_v_40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.4" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_v_62"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.625" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_v_85"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.85" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_extra_photo"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_58sdp"
+                android:background="@drawable/chat_icon_bg"
+                android:gravity="bottom|center"
+                android:insetTop="0dp"
+                android:paddingHorizontal="0dp"
+                android:text="@string/photo"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                app:backgroundTint="@null"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_photo"
+                app:iconGravity="textTop"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="@id/guide_v_15"
+                app:layout_constraintStart_toStartOf="@id/guide_v_15"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@android:color/darker_gray" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_extra_camera"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_58sdp"
+                android:background="@drawable/chat_icon_bg"
+                android:gravity="bottom|center"
+                android:insetTop="0dp"
+                android:paddingHorizontal="0dp"
+                android:text="@string/camera"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                app:backgroundTint="@null"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_camera"
+                app:iconGravity="textTop"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="@id/guide_v_40"
+                app:layout_constraintStart_toStartOf="@id/guide_v_40"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@android:color/darker_gray" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_extra_call"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_58sdp"
+                android:background="@drawable/chat_icon_bg"
+                android:gravity="bottom|center"
+                android:insetTop="0dp"
+                android:paddingHorizontal="0dp"
+                android:text="@string/call"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                app:backgroundTint="@null"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_phone"
+                app:iconGravity="textTop"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="@id/guide_v_62"
+                app:layout_constraintStart_toStartOf="@id/guide_v_62"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@android:color/darker_gray" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_extra_files"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_58sdp"
+                android:background="@drawable/chat_icon_bg"
+                android:gravity="bottom|center"
+                android:insetTop="0dp"
+                android:paddingHorizontal="0dp"
+                android:text="@string/files"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                app:backgroundTint="@null"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_file"
+                app:iconGravity="textTop"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="@id/guide_v_85"
+                app:layout_constraintStart_toStartOf="@id/guide_v_85"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@android:color/darker_gray" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_extra_voice"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_58sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/chat_icon_bg"
+                android:gravity="bottom|center"
+                android:insetTop="0dp"
+                android:paddingHorizontal="0dp"
+                android:text="@string/voice"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                app:backgroundTint="@null"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_voice"
+                app:iconGravity="textTop"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guide_v_15"
+                app:layout_constraintStart_toStartOf="@id/guide_v_15"
+                app:layout_constraintTop_toBottomOf="@id/action_extra_photo"
+                app:strokeColor="@android:color/darker_gray" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_extra_video_call"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_58sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/chat_icon_bg"
+                android:gravity="bottom|center"
+                android:insetTop="0dp"
+                android:paddingHorizontal="0dp"
+                android:text="@string/title_video_call"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                app:backgroundTint="@null"
+                app:cornerRadius="10dp"
+                app:iconGravity="textTop"
+                app:iconPadding="0dp"
+                app:iconTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guide_v_40"
+                app:layout_constraintStart_toStartOf="@id/guide_v_40"
+                app:layout_constraintTop_toBottomOf="@id/action_extra_camera"
+                app:strokeColor="@android:color/darker_gray" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_extra_video"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_58sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/chat_icon_bg"
+                android:gravity="bottom|center"
+                android:insetTop="0dp"
+                android:paddingHorizontal="0dp"
+                android:text="@string/title_video"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                app:backgroundTint="@null"
+                app:cornerRadius="10dp"
+                app:iconGravity="textTop"
+                app:iconPadding="0dp"
+                app:iconTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guide_v_62"
+                app:layout_constraintStart_toStartOf="@id/guide_v_62"
+                app:layout_constraintTop_toBottomOf="@id/action_extra_call"
+                app:strokeColor="@android:color/darker_gray" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_extra_prescription"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_58sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/chat_icon_bg"
+                android:gravity="bottom|center"
+                android:insetTop="0dp"
+                android:paddingHorizontal="0dp"
+                android:text="@string/title_prescriptions"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                android:visibility="gone"
+                app:backgroundTint="@null"
+                app:cornerRadius="4dp"
+                app:iconGravity="textTop"
+                app:iconPadding="0dp"
+                app:iconTint="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guide_v_85"
+                app:layout_constraintStart_toStartOf="@id/guide_v_85"
+                app:layout_constraintTop_toBottomOf="@id/action_extra_files"
+                app:strokeColor="@android:color/darker_gray" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/backpack_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chat_edittext">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/backpack_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/backpack_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

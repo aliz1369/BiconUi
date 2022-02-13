@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="prescription"
+            type="com.tivasoft.biconui.data.model.network.responses.common.PrescriptionData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        app:backgroundRes="@{prescription.type}"
+        android:layout_height="@dimen/_80sdp">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.AppCompat.SearchResult.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/metropolismedium"
+            android:padding="@dimen/_8sdp"
+            android:text="@{prescription.data.title}"
+            android:textColor="@{prescription.type == -1 ? @color/black : @color/white}"
+            android:textSize="@{prescription.type == -1 ? @dimen/_14ssp : @dimen/_16ssp}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

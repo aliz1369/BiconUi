@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EBEBEB"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/phone_number"
+            android:textSize="@dimen/_20ssp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/metropolisregular"
+            android:textColor="#5c5c5c">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_enter_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_phone_number"
+            app:layout_constraintLeft_toLeftOf="@id/tv_phone_number"
+            app:layout_constraintRight_toRightOf="@id/tv_phone_number"
+            android:layout_marginTop="30dp"
+            android:textSize="@dimen/_12ssp"
+            android:textAlignment="center"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/please_enter_you_phone_number_to_enter"
+            android:textColor="#5b5b5b">
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_number"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:elevation="5dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_edit_text_2"
+            tools:targetApi="lollipop">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:layout_constraintTop_toBottomOf="@id/et_number"
+            android:background="@drawable/rounded_button_2"
+            app:layout_constraintLeft_toLeftOf="@id/et_number"
+            app:layout_constraintRight_toRightOf="@id/et_number"
+            android:layout_marginTop="50dp"
+            android:text="@string/confirm"
+            android:fontFamily="@font/metropolismedium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textAllCaps="false">
+
+        </Button>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+

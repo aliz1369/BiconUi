@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EBEBEB"
+        android:padding="20dp">
+
+
+        <TextView
+            android:id="@+id/tv_enter_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/enter_code"
+            android:textSize="@dimen/_20ssp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/metropolisregular"
+            android:textColor="#5c5c5c">
+        </TextView>
+
+
+
+
+        <TextView
+            android:id="@+id/tv_enter_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_code"
+            app:layout_constraintLeft_toLeftOf="@id/tv_enter_code"
+            app:layout_constraintRight_toRightOf="@id/tv_enter_code"
+            android:layout_marginTop="30dp"
+            android:textSize="@dimen/_15ssp"
+            android:textAlignment="center"
+            android:fontFamily="@font/metropolismedium"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/a_code_will_be_sent_to_the_phone_you_entered_by_sms_please_input_the_4_letter_text"
+            android:textColor="#5b5b5b">
+        </TextView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_change_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_number"
+            app:layout_constraintLeft_toLeftOf="@id/tv_enter_number"
+            app:layout_constraintRight_toRightOf="@id/tv_enter_number"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:drawableStart="@drawable/edit"
+            android:text="09378250210"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="#5b5b5b"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/metropolislight">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_number_1"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_55sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_number"
+            app:layout_constraintLeft_toLeftOf="@id/tv_enter_number"
+            app:layout_constraintRight_toLeftOf="@id/et_number_2"
+            android:elevation="5dp"
+            android:maxLength="1"
+            android:layout_marginTop="70dp"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_edit_text_2"
+            tools:targetApi="lollipop">
+
+        </com.google.android.material.textfield.TextInputEditText>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_number_2"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_55sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_number"
+            app:layout_constraintLeft_toRightOf="@id/et_number_1"
+            app:layout_constraintRight_toLeftOf="@id/et_number_3"
+            android:elevation="5dp"
+            android:layout_marginTop="70dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_edit_text_2">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_number_3"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_55sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_number"
+            app:layout_constraintLeft_toRightOf="@id/et_number_2"
+            app:layout_constraintRight_toLeftOf="@id/et_number_4"
+            android:elevation="5dp"
+            android:layout_marginTop="70dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:fontFamily="@font/metropolislight"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_edit_text_2">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_number_4"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_55sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_number"
+            app:layout_constraintRight_toRightOf="@id/tv_enter_number"
+            app:layout_constraintLeft_toRightOf="@id/et_number_3"
+            android:elevation="5dp"
+            android:layout_marginTop="70dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_edit_text_2">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+
+        <Button
+            android:id="@+id/btn_send_again"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:layout_constraintTop_toBottomOf="@id/progress_indicator"
+            android:background="@drawable/disable_rouned_button"
+            app:layout_constraintLeft_toLeftOf="@id/et_number_1"
+            app:layout_constraintRight_toRightOf="@id/et_number_4"
+            android:layout_marginTop="50dp"
+            android:text="@string/send_again"
+            android:fontFamily="@font/metropolismedium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textAllCaps="false"
+            android:enabled="false"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/progress_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:paddingHorizontal="@dimen/_36sdp"
+            android:fontFamily="@font/metropolislight"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_number_1" />
+
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

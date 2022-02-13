@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="specialties"
+            type="com.tivasoft.biconui.data.model.network.responses.doctor.SpecialtiesData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rb_specialties"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_selector_dark"
+            android:button="@android:color/transparent"
+            android:checked="@{specialties.isChecked}"
+            android:elevation="4dp"
+            android:fontFamily="@font/metropolismedium"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="@dimen/_32sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@{specialties.name}"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

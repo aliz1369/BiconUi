@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="backpack"
+            type="com.tivasoft.biconui.data.model.network.responses.common.Backpack" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_test_item"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backpack_test_icon"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:background="#000"
+            android:insetTop="0dp"
+            app:cornerRadius="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/background" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/test_availability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:fontFamily="@font/metropolisregular"
+            android:text="@{backpack.availability}"
+            android:textColor="@color/biconGrayLow"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="@id/backpack_test_icon"
+            app:layout_constraintStart_toEndOf="@id/backpack_test_icon" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/test_text"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:background="@android:color/transparent"
+            android:ellipsize="end"
+            android:fontFamily="@font/metropolislight"
+            android:gravity="start|bottom"
+            android:maxLines="2"
+            android:text="@{backpack.title}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/test_availability"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/backpack_test_icon"
+            app:layout_constraintTop_toTopOf="@id/backpack_test_icon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

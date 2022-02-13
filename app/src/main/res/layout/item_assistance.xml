@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="assistance"
+            type="com.tivasoft.biconui.data.model.network.responses.doctor.AssistanceData" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/rounded_button_grey"
+        android:padding="@dimen/_8sdp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/assistance_reject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/metropolismedium"
+            android:padding="@dimen/_4sdp"
+            android:text="@string/reject"
+            android:textColor="@color/biconRed"
+            android:textSize="@dimen/_10ssp"
+            app:handleRejectVisibility="@{assistance.status}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/assistance_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:fontFamily="@font/metropolismedium"
+            android:padding="@dimen/_4sdp"
+            android:text="@string/accept"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_10ssp"
+            app:handleAcceptVisibility="@{assistance.status}"
+            app:layout_constraintEnd_toStartOf="@id/assistance_reject"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:fontFamily="@font/metropolismedium"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/welcome_bg"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toStartOf="@id/assistance_accept"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setStatusText="@{assistance.status}" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/assistance_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/name_label"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/status" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/assistance_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@{assistance.fullName}"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="@id/assistance_name_label"
+            app:layout_constraintStart_toEndOf="@id/assistance_name_label"
+            app:layout_constraintTop_toTopOf="@id/assistance_name_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/assistance_phone_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/phone_label"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/assistance_name_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/assistance_phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@{assistance.phoneNumber}"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="@id/assistance_phone_label"
+            app:layout_constraintStart_toEndOf="@id/assistance_phone_label"
+            app:layout_constraintTop_toTopOf="@id/assistance_phone_label" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/assistance_description_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/description_label"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/assistance_phone_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/assistance_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@{assistance.description}"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="@id/assistance_description_label"
+            app:layout_constraintStart_toEndOf="@id/assistance_description_label"
+            app:layout_constraintTop_toTopOf="@id/assistance_description_label" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

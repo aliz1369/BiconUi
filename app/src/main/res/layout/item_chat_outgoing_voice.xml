@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="message"
+            type="com.tivasoft.biconui.data.model.local.ui.Message" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_6sdp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_v_25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_test_item"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_v_25"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressImageButton
+                android:id="@+id/play"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@android:color/transparent"
+                android:insetTop="0dp"
+                android:src="@drawable/ic_download"
+                app:cornerRadius="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:playVoice="@{message.content}"
+                app:strokeColor="@color/background" />
+            <com.tivasoft.biconui.utils.PlayerVisualizerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/play"
+                app:layout_constraintBottom_toTopOf="@id/chat_time"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/file_format"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/metropolisregular"
+                android:textColor="@color/biconGrayLow"
+                android:textSize="@dimen/_10sdp"
+                app:fileFormat="@{message.content}"
+                app:layout_constraintStart_toEndOf="@id/play"
+                app:layout_constraintTop_toTopOf="@id/play" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/file_name"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/metropolislight"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                app:fileName="@{message.content}"
+                app:layout_constraintBottom_toBottomOf="@id/play"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/play"
+                app:layout_constraintTop_toBottomOf="@id/file_format" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/chat_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/metropolislight"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_7ssp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/file_name"
+                app:layout_constraintTop_toBottomOf="@id/play"
+                app:setChatTime="@{message.time}" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

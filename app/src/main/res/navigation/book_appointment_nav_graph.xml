@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_patient_list">
+
+    <fragment
+        android:id="@+id/fragment_patient_list"
+        android:name="com.tivasoft.biconui.ui.common.profile.add_schedule.PatientListFragment"
+        tools:layout="@layout/bottom_sheet_patient_list">
+        <action
+            android:id="@+id/action_patient_list_to_add_patient_schedule"
+            app:destination="@id/fragment_add_patient_schedule"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out">
+            <argument
+                android:name="isEdit"
+                app:argType="boolean"
+                app:nullable="false" />
+            <argument
+                android:name="id"
+                app:argType="string"
+                app:nullable="false" />
+            <argument
+                android:name="patientName"
+                app:argType="string"
+                app:nullable="false" />
+            <argument
+                android:name="patientPhoto"
+                app:argType="string"
+                app:nullable="false" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_add_patient_schedule"
+        android:name="com.tivasoft.biconui.ui.doctor.add_patient_schedule.AddPatientScheduleFragment"
+        tools:layout="@layout/fragment_add_patient_schedule">
+        <argument
+            android:name="isEdit"
+            app:argType="boolean"
+            app:nullable="false" />
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="patientName"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="patientPhoto"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+</navigation>

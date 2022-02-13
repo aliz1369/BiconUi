@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/account_information_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/doctor_profile_background"
+        android:padding="@dimen/_20sdp">
+
+
+        <TextView
+            android:id="@+id/tv_account_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/metropolisregular"
+            android:text="@string/account_information"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/account_image"
+            android:layout_width="@dimen/_86sdp"
+            android:layout_height="@dimen/_86sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_account_information"
+            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+        <Button
+            android:id="@+id/photo_from_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gallery"
+            app:layout_constraintBottom_toBottomOf="@id/account_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/account_image" />
+
+        <Button
+            android:id="@+id/photo_from_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera"
+            app:layout_constraintBottom_toBottomOf="@id/account_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/account_image" />
+
+        <TextView
+            android:id="@+id/tv_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/degree"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/account_image" />
+
+
+        <Spinner
+            android:id="@+id/spinner_degree"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rounded_edit_text_2"
+            android:elevation="@dimen/_5sdp"
+            android:entries="@array/tests"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_degree" />
+
+        <TextView
+            android:id="@+id/tv_specialty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/specialty"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintLeft_toLeftOf="@id/spinner_degree"
+            app:layout_constraintRight_toRightOf="@id/spinner_degree"
+            app:layout_constraintTop_toBottomOf="@id/spinner_degree" />
+
+
+        <Spinner
+            android:id="@+id/spinner_specialty"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rounded_edit_text_2"
+            android:elevation="@dimen/_5sdp"
+            android:entries="@array/tests"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_specialty" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/email"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintLeft_toLeftOf="@id/spinner_specialty"
+            app:layout_constraintRight_toRightOf="@id/spinner_specialty"
+            app:layout_constraintTop_toBottomOf="@id/spinner_specialty" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rounded_edit_text_2"
+            android:padding="@dimen/_8sdp"
+            android:textAlignment="textStart"
+            android:textColor="@color/doctor_profile_background"
+            app:layout_constraintLeft_toLeftOf="@id/tv_email"
+            app:layout_constraintRight_toRightOf="@id/tv_email"
+            app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+        <TextView
+            android:id="@+id/consulting_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/consulting"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_email" />
+
+
+        <Spinner
+            android:id="@+id/spinner_consulting"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rounded_edit_text_2"
+            android:elevation="@dimen/_5sdp"
+            android:entries="@array/consulting"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/consulting_label" />
+
+        <TextView
+            android:id="@+id/class_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/class_title"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_consulting" />
+
+
+        <Spinner
+            android:id="@+id/spinner_class"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rounded_edit_text_2"
+            android:elevation="@dimen/_5sdp"
+            android:entries="@array/classTypes"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/class_label" />
+
+        <TextView
+            android:id="@+id/tv_assistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/need_assistance"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_class" />
+
+        <RadioGroup
+            android:id="@+id/rg_yes_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@id/tv_assistance"
+            app:layout_constraintRight_toRightOf="@id/tv_assistance"
+            app:layout_constraintTop_toBottomOf="@id/tv_assistance">
+
+            <RadioButton
+                android:id="@+id/rb_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/radio_selector_whit_2"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:elevation="4dp"
+                android:padding="10dp"
+                android:text="@string/yes"
+                android:textColor="@color/doctor_profile_background"
+                android:textSize="@dimen/_12ssp" />
+
+            <RadioButton
+                android:id="@+id/rb_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/radio_selector_whit_2"
+                android:button="@android:color/transparent"
+                android:elevation="4dp"
+                android:padding="10dp"
+                android:text="@string/no"
+                android:textColor="@color/background"
+                android:textSize="@dimen/_12ssp" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/tv_commission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/commission"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintLeft_toLeftOf="@id/rg_yes_no"
+            app:layout_constraintRight_toRightOf="@id/rg_yes_no"
+            app:layout_constraintTop_toBottomOf="@id/rg_yes_no" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_commission"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rounded_edit_text_2"
+            android:inputType="numberDecimal"
+            android:maxLength="2"
+            android:padding="@dimen/_8sdp"
+            android:textAlignment="center"
+            android:textColor="@color/doctor_profile_background"
+            app:layout_constraintLeft_toLeftOf="@id/tv_commission"
+            app:layout_constraintRight_toRightOf="@id/tv_commission"
+            app:layout_constraintTop_toBottomOf="@id/tv_commission" />
+
+        <Button
+            android:id="@+id/btn_add_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:background="@drawable/rounded_button_2"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/add_address"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintTop_toBottomOf="@id/et_commission" />
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/rounded_button_2"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintTop_toBottomOf="@id/btn_add_address" />
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirm" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

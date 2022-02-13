@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?><!--Enter phone for register-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/register_bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    android:layout_marginTop="@dimen/_15sdp"
+    android:background="@drawable/topcorner_layout"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_register_enterphone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_register_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20ssp"
+            android:fontFamily="@font/metropolislight"
+            android:text="@string/register"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_26sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_register_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/metropolislight"
+            android:lineHeight="@dimen/_25sdp"
+            android:text="@string/a_code_will_be_sent_to_the_phone_you_entered_by_sms"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_register_title" />
+        <!--input phone number-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/rounded_edit_text_2"
+            android:elevation="@dimen/_5sdp"
+            android:hint="@string/number_hint"
+            android:inputType="phone"
+            android:maxLength="13"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Gray_6"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_register_desc" />
+        <!--register as user-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_register_asuser"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:backgroundTint="@color/turquoise"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/confirm_as_user"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            app:cornerRadius="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_phone_number" />
+        <!--register as dr-->
+        <com.ncorti.slidetoact.SlideToActView
+            android:id="@+id/slider_registerasdoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:elevation="@dimen/_2sdp"
+            app:animation_duration="250"
+            app:inner_color="@color/turquoise"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_register_asuser"
+            app:outer_color="#F7F7F7"
+            app:slider_icon="@drawable/ic_doctor_sign"
+            app:slider_locked="true"
+            app:text="@string/slide_to_sign_as_doctor"
+            app:text_color="@color/black"
+            app:text_size="@dimen/_14sdp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_register_enterconfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_enter_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/metropolisregular"
+            android:text="@string/enter_code"
+            android:textColor="#5c5c5c"
+            android:textSize="@dimen/_28ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_enter_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10ssp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/metropolislight"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/a_code_will_be_sent_to_the_phone_you_entered_by_sms_please_input_the_4_letter_text"
+            android:textAlignment="center"
+            android:textColor="#5b5b5b"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_enter_code"
+            app:layout_constraintRight_toRightOf="@id/tv_enter_code"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_code" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_change_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:drawableStart="@drawable/edit"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/metropolislight"
+            android:text="09378250210"
+            android:textColor="#5b5b5b"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_enter_number"
+            app:layout_constraintRight_toRightOf="@id/tv_enter_number"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_number">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_number_1"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/rounded_edit_text_2"
+            android:elevation="5dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="@id/tv_enter_number"
+            app:layout_constraintRight_toLeftOf="@id/et_number_2"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_number">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_number_2"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/rounded_edit_text_2"
+            android:elevation="5dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@id/et_number_1"
+            app:layout_constraintRight_toLeftOf="@id/et_number_3"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_number">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_number_3"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/rounded_edit_text_2"
+            android:elevation="5dp"
+            android:fontFamily="@font/metropolislight"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@id/et_number_2"
+            app:layout_constraintRight_toLeftOf="@id/et_number_4"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_number">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_number_4"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/rounded_edit_text_2"
+            android:elevation="5dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@id/et_number_3"
+            app:layout_constraintRight_toRightOf="@id/tv_enter_number"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_number">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_send_again"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/blue_button_disabled"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/send_again"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            app:backgroundTint="@color/btn_colored_disable_color"
+            app:layout_constraintLeft_toLeftOf="@id/progress_indicator"
+            app:layout_constraintRight_toRightOf="@id/et_number_4"
+            app:layout_constraintTop_toBottomOf="@id/progress_indicator" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/progress_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:fontFamily="@font/metropolislight"
+            android:paddingHorizontal="@dimen/_36sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_number_1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_create_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_createprofile_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/metropolislight"
+            android:text="Create Profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_28ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--profile photo-->
+        <RelativeLayout
+            android:id="@+id/rl_profilephoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20ssp"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_createprofile_title">
+
+            <TextView
+                android:id="@+id/tv_profilepic_tite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_photo"
+                android:textColor="@color/light_gray" />
+
+            <TextView
+                android:id="@+id/tv_profilepic_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_profilepic_tite"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/required"
+                android:textColor="@color/orange" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:tint="@color/black" />
+        </RelativeLayout>
+
+        <!--name-->
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20ssp"
+            android:layout_marginTop="@dimen/_20ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_profilephoto">
+
+            <TextView
+                android:id="@+id/tv_name_tite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="@color/light_gray" />
+
+            <TextView
+                android:id="@+id/tv_name_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name_tite"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/required"
+                android:textColor="@color/orange" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:tint="@color/black" />
+        </RelativeLayout>
+        <!--nickname-->
+        <RelativeLayout
+            android:id="@+id/rl_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20ssp"
+            android:layout_marginTop="@dimen/_20ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_name">
+
+            <TextView
+                android:id="@+id/tv_nickname_tite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nickname"
+                android:textColor="@color/light_gray" />
+
+            <TextView
+                android:id="@+id/tv_nickname_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_nickname_tite"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/optional_2"
+                android:textColor="@color/light_gray" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:tint="@color/black" />
+        </RelativeLayout>
+        <!--phonenumber-->
+        <RelativeLayout
+            android:id="@+id/rl_phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20ssp"
+            android:layout_marginTop="@dimen/_20ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_nickname">
+
+            <TextView
+                android:id="@+id/tv_phonenumber_tite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number"
+                android:textColor="@color/light_gray" />
+
+            <TextView
+                android:id="@+id/tv_phonenumber_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_phonenumber_tite"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/required"
+                android:textColor="@color/orange" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:tint="@color/black" />
+        </RelativeLayout>
+        <!--birthday-->
+        <RelativeLayout
+            android:id="@+id/rl_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20ssp"
+            android:layout_marginTop="@dimen/_20ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_phonenumber">
+
+            <TextView
+                android:id="@+id/tv_birthday_tite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/birthday"
+                android:textColor="@color/light_gray" />
+
+            <TextView
+                android:id="@+id/tv_birthday_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_birthday_tite"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/required"
+                android:textColor="@color/orange" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:tint="@color/black" />
+        </RelativeLayout>
+        <!--education-->
+        <RelativeLayout
+            android:id="@+id/rl_education"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20ssp"
+            android:layout_marginTop="@dimen/_20ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_birthday">
+
+            <TextView
+                android:id="@+id/tv_education_tite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/education"
+                android:textColor="@color/light_gray" />
+
+            <TextView
+                android:id="@+id/tv_education_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_education_tite"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/optional_2"
+                android:textColor="@color/light_gray" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:tint="@color/black" />
+        </RelativeLayout>
+        <!--city -->
+        <RelativeLayout
+            android:id="@+id/rl_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20ssp"
+            android:layout_marginTop="@dimen/_20ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_education">
+
+            <TextView
+                android:id="@+id/tv_city_tite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/residing_city"
+                android:textColor="@color/light_gray" />
+
+            <TextView
+                android:id="@+id/tv_city_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_city_tite"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/optional_2"
+                android:textColor="@color/light_gray" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:tint="@color/black" />
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_submit_register_asuser"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:backgroundTint="@color/turquoise"
+            android:fontFamily="@font/metropolismedium"
+            android:text="@string/send"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            app:cornerRadius="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

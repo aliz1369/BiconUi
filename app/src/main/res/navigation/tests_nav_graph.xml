@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_tests_name">
+
+    <fragment
+        android:id="@+id/fragment_tests_name"
+        android:name="com.tivasoft.biconui.ui.common.tests.TestsNameFragment"
+        tools:layout="@layout/fragment_tests_name">
+        <argument
+            android:name="testData"
+            app:argType="com.tivasoft.biconui.data.model.network.responses.tests.TestData"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_test_name_to_breath"
+            app:destination="@id/fragment_breath"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_breath"
+        android:name="com.tivasoft.biconui.ui.common.tests.BreathExerciseFragment"
+        tools:layout="@layout/fragment_breath" />
+</navigation>
